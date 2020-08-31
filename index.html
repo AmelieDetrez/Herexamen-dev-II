@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang=en>
+
+<head>
+  <meta charset=utf-8>
+  <title>Herexamen dev II</title>
+  <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+
+<body>
+  <main>
+    <h1>Herexamen Development II</h1>
+    <p>Voornaam: Amélie</p>
+    <p>Achternaam: Detrez</p>
+    <p>Groep: C</p>
+
+
+    <h2>Opgave</h2>
+    <p>
+      Maak een webapplicatie waarmee je boeken volgens auteur kan opzoeken. Je kan de data ophalen via de volgende API
+      call http://openlibrary.org/search.json?author=AUTEUR_NAAM. Een voorbeeld van een API call is <a
+        href="http://openlibrary.org/search.json?author=george%20orwell">http://openlibrary.org/search.json?author=george%20orwell</a>,
+      je vindt de boeken terug in de `docs` property.
+      <br><br>
+      Zorg ervoor dat een gebruiker zelf een auteur kan ingeven, wanneer hij op de knop duwt, toon je de title, de
+      eerste author, first_publish_year en de book cover van de gevonden boeken. Al deze data vind je terug per object
+      in de `docs` array, alleen de book cover is niet aanwezig. De book cover kan je ophalen door de volgende link te
+      genereren: http://covers.openlibrary.org/b/id/COVER_I-L.jpg, de cover_i vind je terug in de data. Een voorbeeld
+      van een correcte cover is het volgende: <a
+        href="http://covers.openlibrary.org/b/id/8748936-L.jpg">http://covers.openlibrary.org/b/id/8748936-L.jpg</a>.
+      <br><br>
+      Voordat je de boekenlijst toont maak je enkele aanpassingen aan de data. Je moet de boekenlijst sorteren op
+      first_publish_year van laag naar hoog (gebruik hiervoor de sort functie). Zorg er ook voor dat je maximaal 10
+      boeken toont. Helaas hebben sommige boeken geen cover_i, deze boeken moet je eruit filteren (gebruik hiervoor de
+      filter functie).
+      <br><br>
+      Wanneer de data nog aan het laden is, toon je een loading message. Wanneer de ingegeven auteur geen boeken heeft
+      toon je de volgende error message: "No books for author AUTEUR_NAAM"
+    </p>
+    <h3>Starter code</h3>
+    <p>
+      Je vindt de starters code terug in de <a href="opdracht/index.html">opdracht folder</a>. Schrijf je JavaScript in
+      <a href="opdracht/index.js">opdracht/index.js</a>.
+    </p>
+    <h3>Demo uiteindelijke resultaat</h3>
+    <video id="firstVideo" width="660" height="400" controls>
+      <source src="opdracht/demo.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <h3>Criteria</h3>
+    <h4>Geïmplementeerde functionaliteiten</h4>
+    <ul>
+      <li><input type="checkbox">
+        <div>Toon een loading message wanneer de API call nog bezig is<div class="points">1 punt</div>
+        </div>
+      </li>
+      <li><input type="checkbox">
+        <div>Toon de titel, auteur, book cover en published date van de gevonden boeken op basis van de ingegeven auteur
+          <div class="points">3 punten</div>
+        </div>
+      </li>
+      <li><input type="checkbox">
+        <div>Sorteer de boeken op first_publish_year van laag naar hoog
+          <div class="points">2 punten</div>
+        </div>
+      </li>
+      <li><input type="checkbox">
+        <div>Zorg ervoor dat boeken zonder cover_i uitgefilterd worden.
+          <div class="points">2 punten</div>
+        </div>
+      </li>
+      <li><input type="checkbox">
+        <div>Toon maximaal 10 boeken
+          <div class="points">1 punt</div>
+        </div>
+      </li>
+      <li><input type="checkbox">
+        <div>Toon de volgende message als er geen boeken gevonden zijn voor de ingegeven auteur "No books for author
+          AUTEUR_NAAM"
+          <div class="points">1 punt</div>
+        </div>
+      </li>
+    </ul>
+    <h4>Code qualiteit</h4>
+    <p>Pas op, je moet voldoende code en geïmplementeerde functionaliteiten hebben om punten te halen op code qualiteit
+    </p>
+    <ul>
+      <li><input type="checkbox">
+        <div>De code is volledig objectgeoriënteerd geschreven<div class="points">4 punten</div>
+        </div>
+      </li>
+      <li><input type="checkbox">
+        <div>Er wordt geen code herhaalt.<div class="points">2 punten</div>
+        </div>
+      </li>
+    </ul>
+    <p class="points">Totaal: 16 punten</p>
+  </main>
+</body>
+
+</html>
